@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-transparent" color-on-scroll="500">
+    <div class="container">
+        <div class="navbar-translate">
+            <a class="navbar-brand" [routerLink] = "['/home']" ><img src="assets/img/quavalogosvg.svg" style= "height:30px"></a>
+            <button class="navbar-toggler navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
+                <span class="navbar-toggler-bar"></span>
+                <span class="navbar-toggler-bar"></span>
+                <span class="navbar-toggler-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink] = "['/home']">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink] = "['/about-us']">About Us</a>
+                </li>
+               <li class="nav-item">
+                    <div ngbDropdown class="nav-item d-inline-block dropdown">
+                        <a class="nav-link" id="dropdownBasic1" ngbDropdownToggle>Services</a>
+                        <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-primary">
+                            <a [routerLink] = "['/our-services/project-management']" class="dropdown-item">Project Management Engagement</a>
+                            <a [routerLink] = "['/our-services/quality-assurance']" class="dropdown-item">Quality Assurance Practices</a>
+                            <a [routerLink] = "['/our-services/consulting']" class="dropdown-item">Consulting & Process Improvements</a>
+                            <a [routerLink] = "['/our-services/manpower']" class="dropdown-item">Manpower Engagement</a>
+                            <a [routerLink] = "['/our-services/website-development']" class="dropdown-item">Website Development</a>
+                            <a [routerLink] = "['/our-services/application-development']" class="dropdown-item">Custom-built Application Development</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div ngbDropdown class="nav-item d-inline-block dropdown">
+                        <a class="nav-link" id="dropdownBasic1" ngbDropdownToggle>Products</a>
+                        <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-primary">
+                            <a [routerLink] = "['/products/syspro']" class="dropdown-item">SYSPRO</a>
+                            <a [routerLink] = "['/products/syspro-expresso']" class="dropdown-item">SYSPRO espresso</a>
+                        </div>
+                    </div>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" [routerLink] = "['/blog']">Blog</a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink] = "['/home']" fragment = "contactUs">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
