@@ -8,7 +8,7 @@
                 <span class="navbar-toggler-bar"></span>
             </button>
         </div>
-        <div class="collapse navbar-collapse" id="navbarToggler">
+        <div class="navbar-collapse" id="navbarToggler">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link" [routerLink] = "['/home']">Home</a>
@@ -24,16 +24,16 @@
                             <a [routerLink] = "['/our-services/quality-assurance']" class="dropdown-item">Quality Assurance Practices</a>
                             <a [routerLink] = "['/our-services/consulting']" class="dropdown-item">Consulting & Process Improvements</a>
                             <a [routerLink] = "['/our-services/manpower']" class="dropdown-item">Manpower Engagement</a>
-                            <a [routerLink] = "['/our-services/website-development']" class="dropdown-item">Website Development</a>
                             <a [routerLink] = "['/our-services/application-development']" class="dropdown-item">Custom-built Application Development</a>
+                            <a [routerLink] = "['/our-services/website-development']" class="dropdown-item">Website Development</a>
                         </div>
                     </div>
                 </li>
                 <li class="nav-item">
                     <div ngbDropdown class="nav-item d-inline-block dropdown">
-                        <a class="nav-link" id="dropdownBasic1" ngbDropdownToggle>Products</a>
-                        <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-primary">
-                            <a [routerLink] = "['/products/syspro']" class="dropdown-item">SYSPRO</a>
+                        <a class="nav-link" id="dropdown2"  ngbDropdownToggle>Products</a>
+                        <div ngbDropdownMenu aria-labelledby="dropdown2" class="dropdown-primary">
+                            <a [routerLink] = "['/products/syspro']" class="dropdown-item">SYSPRO ERP</a>
                             <a [routerLink] = "['/products/syspro-expresso']" class="dropdown-item">SYSPRO espresso</a>
                         </div>
                     </div>
