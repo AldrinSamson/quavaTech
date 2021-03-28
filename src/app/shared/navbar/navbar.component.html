@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg fixed-top navbar-transparent" color-on-scroll="500">
     <div class="container">
         <div class="navbar-translate">
-            <a class="navbar-brand" [routerLink] = "['/home']" ><img src="assets/img/quavalogosvg.svg" style= "height:30px"></a>
+            <a class="navbar-brand" [routerLink] = "['/home']" ><img src="assets/img/quavalogosvg.svg" style= "height:40px"></a>
             <button class="navbar-toggler navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
                 <span class="navbar-toggler-bar"></span>
                 <span class="navbar-toggler-bar"></span>
@@ -19,7 +19,7 @@
                <li class="nav-item">
                     <div ngbDropdown class="nav-item d-inline-block dropdown">
                         <a class="nav-link" id="dropdownBasic1" ngbDropdownToggle>Services</a>
-                        <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-primary">
+                        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
                             <a [routerLink] = "['/our-services/project-management']" class="dropdown-item">Project Management Engagement</a>
                             <a [routerLink] = "['/our-services/quality-assurance']" class="dropdown-item">Quality Assurance Practices</a>
                             <a [routerLink] = "['/our-services/consulting']" class="dropdown-item">Consulting & Process Improvements</a>

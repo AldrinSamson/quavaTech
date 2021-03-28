@@ -18,7 +18,7 @@ import { ApplicationDevelopmentComponent } from './pages/our-services/applicatio
 import { SysproComponent } from './pages/products/syspro/syspro.component';
 import { SysproExpressoComponent } from './pages/products/syspro-expresso/syspro-expresso.component';
 
-const routes: Routes =[
+const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home',      component: HomepageComponent },
     { path: 'about-us',      component: AboutUsComponent },
@@ -41,7 +41,6 @@ const routes: Routes =[
     CommonModule,
     BrowserModule,
     RouterModule.forRoot(routes, {
-      scrollPositionRestoration: 'enabled',
       anchorScrolling: 'enabled',
       scrollOffset: [0, 64]
     })

@@ -1,16 +1,4 @@
 <div class="site-wrap">
-<div class="wrap">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 d-flex align-items-center">
-                <p class="mb-0 phone pl-md-2">
-                    <a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +63 0000000</a> 
-                    <a href="#"><span class="fa fa-paper-plane mr-1"></span> admin@quavatechnologies.com</a>
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
 
 
 <!-- <div class="hero-wrap" style="background-image: url('assets/img/quavaTechNow/bg45.jpg');" data-stellar-background-ratio="0.5">
@@ -29,83 +17,84 @@
     </div>
   </div> -->
 
-  <ngb-carousel  
+  <ngb-carousel #carousel 
+  interval=0 
+  wrap="true"  
+  (slide)=onSlide($event)
   [showNavigationArrows]="false" 
   [showNavigationIndicators]="true"
   interval="4000"
   [keyboard]="true"
   [pauseOnHover]="true"
-  [wrap]="true"
-  direction="right"
   [activeId]="'firstSlide'">
     <ng-template ngbSlide id="firstSlide">
-        <div class="hero-wrap " style="background-image: url('assets/img/quavaTechNow/23.jpg');" data-stellar-background-ratio="0.5">
-            <div class="overlay"></div>
-            <div class="container">
-              <div class="row no-gutters slider-text align-items-center">
-                <div class="col-md-6   d-flex align-items-end" data-aos="fade-right" data-aos-delay="200">
-                    <div class="text w-100">
-                      <h1 class="mb-4">Quality, Value & Technology</h1>
-                      <p class="mb-4">"We are QuavaTech. Simply, we are Quava."</p>
-                      <p><a [routerLink] = "['/home']" fragment = "contactUs" class="btn btn-primary py-3 px-4">Contact us</a> <a [routerLink] = "['/about-us']" class="btn btn-white py-3 px-4">Read more</a></p>
-                  </div>
+      <div class="hero-wrap " style="background-image: url('assets/img/quavaTechNow/23.jpg');" data-stellar-background-ratio="0.5" [@simpleTranslation]="slideControl[0]">
+          <div class="overlay"></div>
+          <div class="container">
+            <div class="row no-gutters slider-text align-items-center">
+              <div class="col-md-6   d-flex align-items-end" data-aos="fade-right" data-aos-delay="200">
+                  <div class="text w-100">
+                    <h1 class="mb-4">Quality, Value & Technology</h1>
+                    <p class="mb-4">"We are QuavaTech. Simply, we are Quava."</p>
+                    <p><a [routerLink] = "['/home']" fragment = "contactUs" class="btn btn-primary py-3 px-4">Contact us</a> <a [routerLink] = "['/about-us']" class="btn btn-white py-3 px-4">Read more</a></p>
                 </div>
-                
               </div>
+              
             </div>
           </div>
-    </ng-template>
-    <ng-template ngbSlide id="secondSlide">
-        <div class="hero-wrap bg-bottom" style="background-image: url('assets/img/quavaTechNow/16.jpg');" data-stellar-background-ratio="0.5">
-            <div class="overlay"></div>
-            <div class="container">
-              <div class="row no-gutters slider-text align-items-center">
-                <div class="col-md-6   d-flex align-items-end" data-aos-delay="200">
-                    <div class="text w-100">
-                      <h1 class="mb-4">Our claim & upkeep are simple</h1>
-                      <p class="mb-4">"What we offer, we have successfully experienced."</p>
-                      <p><a [routerLink] = "['/home']" fragment = "contactUs" class="btn btn-primary py-3 px-4">Contact us</a> <a [routerLink] = "['/about-us']" class="btn btn-white py-3 px-4">Read more</a></p>
-                  </div>
+        </div>
+  </ng-template>
+  <ng-template ngbSlide id="secondSlide">
+      <div class="hero-wrap bg-bottom" style="background-image: url('assets/img/quavaTechNow/16.jpg');" data-stellar-background-ratio="0.5" [@simpleTranslation]="slideControl[1]">
+          <div class="overlay"></div>
+          <div class="container">
+            <div class="row no-gutters slider-text align-items-center">
+              <div class="col-md-6   d-flex align-items-end" data-aos-delay="200">
+                  <div class="text w-100">
+                    <h1 class="mb-4">Our claim & upkeep are simple</h1>
+                    <p class="mb-4">"What we offer, we have successfully experienced."</p>
+                    <p><a [routerLink] = "['/home']" fragment = "contactUs" class="btn btn-primary py-3 px-4">Contact us</a> <a [routerLink] = "['/about-us']" class="btn btn-white py-3 px-4">Read more</a></p>
                 </div>
-                
               </div>
+              
             </div>
           </div>
-    </ng-template>
-    <ng-template ngbSlide id="thirdSlide">
-        <div class="hero-wrap bg-bottom" style="background-image: url('assets/img/quavaTechNow/13.jpg');" data-stellar-background-ratio="0.5">
-            <div class="overlay"></div>
-            <div class="container">
-              <div class="row no-gutters slider-text align-items-center">
-                <div class="col-md-6   d-flex align-items-end" data-aos-delay="200">
-                    <div class="text w-100">
-                      <h1 class="mb-4">We are restless without the very facts</h1>
-                      <p class="mb-4">"What we initiate, we labor & harness with substantial information."</p>
-                      <p><a [routerLink] = "['/home']" fragment = "contactUs" class="btn btn-primary py-3 px-4">Contact us</a> <a [routerLink] = "['/about-us']" class="btn btn-white py-3 px-4">Read more</a></p>
-                  </div>
+        </div>
+  </ng-template>
+  <ng-template ngbSlide id="thirdSlide">
+      <div class="hero-wrap bg-bottom" style="background-image: url('assets/img/quavaTechNow/13.jpg');" data-stellar-background-ratio="0.5" [@simpleTranslation]="slideControl[2]" >
+          <div class="overlay"></div>
+          <div class="container">
+            <div class="row no-gutters slider-text align-items-center">
+              <div class="col-md-6   d-flex align-items-end" data-aos-delay="200">
+                  <div class="text w-100">
+                    <h1 class="mb-4">We are restless without the very facts</h1>
+                    <p class="mb-4">"What we initiate, we labor & harness with substantial information."</p>
+                    <p><a [routerLink] = "['/home']" fragment = "contactUs" class="btn btn-primary py-3 px-4">Contact us</a> <a [routerLink] = "['/about-us']" class="btn btn-white py-3 px-4">Read more</a></p>
                 </div>
-                
               </div>
+              
             </div>
           </div>
-    </ng-template>
-    <ng-template ngbSlide id="fourthSlide">
-        <div class="hero-wrap bg-bottom" style="background-image: url('assets/img/quavaTechNow/29.jpg');" data-stellar-background-ratio="0.5">
-            <div class="overlay"></div>
-            <div class="container">
-              <div class="row no-gutters slider-text align-items-center">
-                <div class="col-md-6   d-flex align-items-end" data-aos-delay="200">
-                    <div class="text w-100">
-                      <h1 class="mb-4">We see change as inevitable</h1>
-                      <p class="mb-4">"We don’t sell, we promote Value in our product propositions."</p>
-                      <p><a [routerLink] = "['/home']" fragment = "contactUs" class="btn btn-primary py-3 px-4">Contact us</a> <a [routerLink] = "['/about-us']" class="btn btn-white py-3 px-4">Read more</a></p>
-                  </div>
+        </div>
+  </ng-template>
+  <ng-template ngbSlide id="fourthSlide">
+      <div class="hero-wrap bg-bottom" style="background-image: url('assets/img/quavaTechNow/29.jpg');" data-stellar-background-ratio="0.5" [@simpleTranslation]="slideControl[3]">
+          <div class="overlay"></div>
+          <div class="container">
+            <div class="row no-gutters slider-text align-items-center">
+              <div class="col-md-6   d-flex align-items-end" data-aos-delay="200">
+                  <div class="text w-100">
+                    <h1 class="mb-4">We see change as inevitable</h1>
+                    <p class="mb-4">"We don’t sell, we promote Value in our product propositions."</p>
+                    <p><a [routerLink] = "['/home']" fragment = "contactUs" class="btn btn-primary py-3 px-4">Contact us</a> <a [routerLink] = "['/about-us']" class="btn btn-white py-3 px-4">Read more</a></p>
                 </div>
-                
               </div>
+              
             </div>
           </div>
-    </ng-template>
+        </div>
+  </ng-template>
   </ngb-carousel>
 
   <!-- <section class="ftco-intro"> 
@@ -161,7 +150,7 @@
   <section class="ftco-section ftco-no-pb ftco-no-pt">
           <div class="container">
               <div class="row no-gutters">
-                  <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-right">
+                  <div class="col-md-6 d-flex align-items-stretch">
                       <div class="img img-3 w-100 d-flex justify-content-center align-items-center" style="background-image: url(assets/img/quavaTechNow/21.jpg); position: relative;">
                       </div>
                   </div>
@@ -170,7 +159,7 @@
                 <div class="heading-section">
 
                   <span class="subheading">OUR GUIDING PRINCIPLE</span>
-                            <h2 class="mb-3" >"Quality. Value. Technology"</h2>
+                            <h2 class="mb-3" >"Quality. Value. Technology."</h2>
 
                             <p>We live and breathe by what we do. This is our universe. However small or big our endeavor is, 
                             we are guided by our commitment to consistently provide our very own brand of Quality, Value and Technology.</p>
@@ -178,7 +167,7 @@
                             <h2 class="mb-3" >Altogether, this is what makes us Quava.</h2> 
                 </div>
 
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-lg-6">
                         <div class="services d-flex w-100" data-aos="fade-up">
                                   <div class="icon d-flex align-items-center justify-content-center">
@@ -223,7 +212,7 @@
                                   </div>
                               </div>
                     </div>
-                </div>
+                </div> -->
             </div>
 
                   </div>
@@ -244,11 +233,10 @@
           <div class="row">
               <div class="col-md-4 d-flex align-items-stretch  " data-aos="fade-right">
                   <div class="services-2 text-center">
-                      <div class="icon-wrap">
-                          <div class="mini-icon d-flex align-items-center justify-content-center"></div>
-                          <div class="icon d-flex align-items-center justify-content-center">
-                            <a [routerLink] = "['/our-services/project-management']" class = "ios-group-of-projects lg"></a>
-                          </div>
+                      <div class="backgroundIcon align-items-center justify-content-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                          <a [routerLink] = "['/our-services/project-management']" class = "icon-borderOnly "></a>
+                        </div>
                       </div>
                       <h2>Project Management Engagement</h2>
                       <h4>We Walk the Talk</h4><p>Whether On-Premise or Cloud; whether the customary Waterfall
@@ -257,12 +245,10 @@
               </div>
               <div class="col-md-4 d-flex align-items-stretch  " data-aos="fade-up">
                   <div class="services-2 text-center">
-                      <div class="icon-wrap">
-                          <div class="mini-icon d-flex align-items-center justify-content-center"></div>
-                          <div class="icon d-flex align-items-center justify-content-center">
-                            <a [routerLink] = "['/our-services/quality-assurance']" class = "ios-warranty lg"></a>
-                          </div>
-                         
+                      <div class="backgroundIcon align-items-center justify-content-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                          <a [routerLink] = "['/our-services/quality-assurance']" class = "icon-borderOnly "></a>
+                        </div>
                       </div>
                       <h2>Quality Assurance Practices</h2>
                       <h4>We are Patient</h4><p>We have the skills, experience and an enormous amount of 
@@ -271,11 +257,10 @@
               </div>
               <div class="col-md-4 d-flex align-items-stretch  " data-aos="fade-left">
                   <div class="services-2 text-center">
-                      <div class="icon-wrap">
-                          <div class="mini-icon d-flex align-items-center justify-content-center"></div>
-                          <div class="icon d-flex align-items-center justify-content-center">
-                            <a [routerLink] = "['/our-services/consulting']" class = "ios-process-improvement lg"></a>
-                          </div>
+                      <div class="backgroundIcon align-items-center justify-content-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                          <a [routerLink] = "['/our-services/consulting']" class = "icon-borderOnly "></a>
+                        </div>
                       </div>
                       <h2>Consulting & Process Improvements</h2>
                       <h4>We Embrace Change</h4><p>For we speak the IT lingo, we surely will understand. 
@@ -284,11 +269,10 @@
               </div>
               <div class="col-md-4 d-flex align-items-stretch  " data-aos="fade-right">
                   <div class="services-2 text-center">
-                      <div class="icon-wrap">
-                          <div class="mini-icon d-flex align-items-center justify-content-center"></div>
-                          <div class="icon d-flex align-items-center justify-content-center">
-                            <a [routerLink] = "['/our-services/manpower']" class = "ios-conference lg"></a>
-                          </div>
+                       <div class="backgroundIcon align-items-center justify-content-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                          <a [routerLink] = "['/our-services/manpower']" class = "icon-borderOnly "></a>
+                        </div>
                       </div>
                       <h2>Manpower Engagement</h2>
                       <h4>We Ensure Talents</h4><p>Ensuring our talents justifies our commitment to our 
@@ -297,12 +281,11 @@
               </div>
               <div class="col-md-4 d-flex align-items-stretch  "data-aos="fade-up">
                 <div class="services-2 text-center">
-                    <div class="icon-wrap">
-                        <div class="mini-icon d-flex align-items-center justify-content-center" ></div>
-                        <div class="icon d-flex align-items-center justify-content-center" >
-                          <a [routerLink] = "['/our-services/application-development']" class = "ios-mockup lg"></a>
+                     <div class="backgroundIcon align-items-center justify-content-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                          <a [routerLink] = "['/our-services/application-development']" class = "icon-borderOnly "></a>
                         </div>
-                    </div>
+                      </div>
                     <h2>Application Development</h2>
                     <h4>We Shape Your Requirements</h4><p>Tell us what you need. 
                       We’ll let our software development capabilities walk the talk with you.</p>
@@ -310,11 +293,10 @@
               </div>
               <div class="col-md-4 d-flex align-items-stretch  "data-aos="fade-left">
                   <div class="services-2 text-center">
-                      <div class="icon-wrap">
-                          <div class="mini-icon d-flex align-items-center justify-content-center" ></div>
-                          <div class="icon d-flex align-items-center justify-content-center" >
-                            <a [routerLink] = "['/our-services/website-development']" class = "ios-prototype lg"></a>
-                          </div>
+                      <div class="backgroundIcon align-items-center justify-content-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                          <a [routerLink] = "['/our-services/website-development']" class = "icon-borderOnly "></a>
+                        </div>
                       </div>
                       <h2>Website Development</h2>
                       <h4>We Nurture Your Brand</h4><p>Tell us what you need. From basic to
@@ -323,45 +305,37 @@
               </div>
           </div>
       </div>
-  </section>
+     </section>
 
-  <section class="ftco-section ftco-no-pt ftco-no-pb" id="products">
-    <div class="container-fluid px-md-4">
-        <div class="row justify-content-center pb-5">
-        <div class="col-md-8 text-center heading-section  ">
-            <span class="subheading">Industry-built & Future-proof</span>
-          <h2 class="mb-3">Products</h2>
+     <section class="ftco-section products" id="products">
+      <div class="container">
+          <div class="row justify-content-center pb-5">
+        <div class="col-md-7 heading-section text-center  ">
+            <span class="subheading">INDUSTRY-BUILT & FUTURE-PROOF</span>
+          <h2>Products</h2>
         </div>
       </div>
-        <div class="row">
-            <div class="col-md-3 d-flex align-items-stretch" data-aos="fade-right">
-                <div class="case-wrap d-flex">
-                    <div [routerLink] = "['/products/syspro-expresso']" class="img" style="background-image: url(assets/img/quavaTechNow/SYSPRO-EXPRESSO.png); background-size: auto">
-                        <div class="text">
-                            <h2>SYSPRO Expresso</h2>
-                            <p>ERP on the go</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
-                <div class="case-wrap d-flex">
-                    <div [routerLink] = "['/products/syspro']" class="img" style="background-image: url(assets/img/quavaTechNow/SYSPRO.png);">
-                        <div class="text">
-                            <h2>SYSPRO</h2>
-                            <p>ERP Business Software for Manufacturing & Distribution</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <br>
-        <br>
-        <br>
-    </div>
-  </section>
+          <div class="row">
+              <div class="col-md-6 d-flex align-items-stretch  " data-aos="fade-right">
+                  <div class="services-2 text-center">
+                    <a  class="block-20 img d-flex align-items-center" style="background-image: url('assets/img/quavaTechNow/SYSPRO.png');">
+                    </a>
+                      <h2>SYSPRO</h2>
+                      <h4>ERP Business Software for Manufacturing and Distribution</h4>
+                     
+                  </div>
+              </div>
+              <div class="col-md-6 d-flex align-items-stretch  " data-aos="fade-left">
+                  <div class="services-2 text-center">
+                    <a  class="block-20 nocover img d-flex " style="background-image: url('assets/img/quavaTechNow/SYSPRO-EXPRESSO.png');">
+                    </a>
+                      <h2>SYSPRO Expresso</h2>
+                      <h4>ERP on the go</h4>
+                  </div>
+              </div>
+          </div>
+      </div>
+     </section>
 
 
   <!-- <section class="ftco-section">
@@ -460,7 +434,7 @@
               <div class="col-md-8 half ">
                   <h2 class="mb-4 ">Contact Us</h2>
                   <form action="#" class="appointment">
-                      <div class="row">
+                      <div class="row justify-content-end" >
                               <div class="col-md-4">
                                   <div class="form-group">
                                     <input type="text" class="form-control" placeholder="First Name">
@@ -492,15 +466,17 @@
                                         <div class="select-wrap">
                                 <div class="icon"><span class="fa fa-chevron-down"></span></div>
                                 <select name="" id="" class="form-control">
-                                    <option value="">- Select a Product or Service -</option>
-                                  <option value="">Project Management Engagement</option>
-                                  <option value="">Quality Assurance Practices</option>
-                                  <option value="">Consulting & Process Improvements</option>
-                                  <option value="">Manpower Engagement</option>
-                                  <option value="">Website Development</option>
-                                  <option value="">Custom-built App Development</option>
-                                  <option value="">SYSPRO</option>
-                                  <option value="">SYSPRO Expresso</option>
+                                    <option value="">Select a Service or Product</option>
+                                    <option value="">Services</option>
+                                  <option value="">- Project Management Engagement</option>
+                                  <option value="">- Quality Assurance Practices</option>
+                                  <option value="">- Consulting & Process Improvements</option>
+                                  <option value="">- Manpower Engagement</option>
+                                  <option value="">- Website Development</option>
+                                  <option value="">- Custom-built App Development</option>
+                                  <option value="">Products</option>
+                                  <option value="">- SYSPRO</option>
+                                  <option value="">- SYSPRO Expresso</option>
                                 </select>
                               </div>
                                             </div>
@@ -512,7 +488,7 @@
                         <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
                       </div>
                               </div>
-                              <div class="col-md-4">
+                              <div class=" col-md-4">
                                   <div class="form-group">
                         <input type="submit" value="Send message"  class="btn btn-primary py-3 px-4">
                       </div>
